@@ -1,0 +1,23 @@
+
+<div class="col-xs-4">
+  <h3> Text Inverter</h3>
+  <label> Enter String </label>
+  <input class="form-control input-sm" type="text" name="valstrtext" #valstrtext="ngModel" [(ngModel)]=" strtext" pattern="^[a-zA-Z0-9.!,&:;\-'/?&quot;  ]+$">
+
+  <label> Reverse String </label>
+  <input class="form-control input-sm" [(ngModel)]=" revstr" readonly>
+  <p *ngIf="valstrtext.errors?.pattern ">
+    Invalid String !
+  </p>
+  <br />
+  <button (click)=" reverseStringClick()" [disabled]="valstrtext.errors?.pattern " class="btn btn-primary"> Reverse String</button>
+  <br />
+ 
+</div>
+
+
+
+
+
+
+
